@@ -15,4 +15,7 @@ for i in range (cnt):
 result = float (youth * 990 + adult * 1390)
 discount = 1 if cnt < 3 else 0.9
 result *= discount
-print(result)
+if result:
+    print(f"You have to pay O_o \n{result}")
+else:
+    print("You don't have to pay =)")
