@@ -1,12 +1,12 @@
 def main():
-    cnt = int(input('How many tickets do you wanna buy?\n'))
-    youth = adult = 0
-
+    adult = youth = 0
     try:
+        cnt = int(input('How many tickets do you wanna buy?\n'))
         ages = list(map(int, input("What are the ages of the visitors?\n").split()))
-        #ages = [int(input()) for i in range (cnt)]
+
     except ValueError as e:
-        print("It's a strange age...")
+        print("Your data is wrong, u don't trust me?")
+        exit()
 
     for age in ages:
         if age > 25:
@@ -15,7 +15,7 @@ def main():
             youth += 1
 
     result = float ((youth * 990 + adult * 1390) * (0.9 if cnt > 3 else 1))
-    print(f"You have to pay O_o\n{result} ₽" if result else "You don't have to pay =)")
+    print(f"\nYou have to pay O_o\n{result} ₽" if result else "You don't have to pay =)")
 
 if __name__=="__main__":
     main()
