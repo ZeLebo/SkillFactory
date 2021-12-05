@@ -6,14 +6,19 @@ def binary_search(a: list, left, right, n: int):
         return left if a[left] >= n else left + 1
 
     elif len(a) == 2:
-        return 0 if a[0] < n else 1
+        return 1 if a[0] >= n else 2
 
     elif right > left:
         mid = left + (right - 1) // 2
-        if a[mid] == n:
+
+        if (a[mid] < n) and a[mid + 1] >= n:
+            return mid + 1
+
+        elif a[mid] == n:
             while a[mid - 1] == n:
                 mid -= 1
             return mid
+
         elif a[mid] > n:
             return binary_search(a, left, mid - 1, n)
         else:
