@@ -5,7 +5,10 @@ def binary_search(a: list, left, right, n: int):
     if left == right:
         return left if a[left] >= n else left + 1
 
-    if right > left:
+    elif len(a) == 2:
+        return 0 if a[0] < n else 1
+
+    elif right > left:
         mid = left + (right - 1) // 2
         if a[mid] == n:
             while a[mid - 1] == n:
