@@ -1,4 +1,4 @@
-from Tasks.OOP.Cat import Cat
+from OOP.Cat import Cat
 
 
 def main():
