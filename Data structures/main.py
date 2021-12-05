@@ -34,7 +34,6 @@ def main():
         print("It's not a decimal number")
     else:
         print((lambda x: x if x != -1 else "No such position")(binary_search(a, 0, len(a) - 1, n)))
-        print(*a)
 
 
 if __name__ == '__main__':
