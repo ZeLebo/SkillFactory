@@ -3,11 +3,15 @@ import random
 
 def binary_search(a: list, left, right, n: int):
     if left == right:
-        return left
+        return left if a[left] >= n else left + 1
 
     if right > left:
         mid = left + (right - 1) // 2
-        if a[mid] > n:
+        if a[mid] == n:
+            while a[mid - 1] == n:
+                mid -= 1
+            return mid
+        elif a[mid] > n:
             return binary_search(a, left, mid - 1, n)
         else:
             return binary_search(a, mid + 1, right, n)
