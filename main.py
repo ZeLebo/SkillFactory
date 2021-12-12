@@ -1,4 +1,4 @@
-from Testing.OOP.oop_test import main as check
+from Data_structures.graph import main as check
 
 
 def main():
