@@ -1,6 +1,6 @@
 import telebot
 import time
-from Cryptos import CryptoClassUpdated as CryptoClass
+from Cryptos import CryptoClass
 import keyboards
 
 from decouple import config
